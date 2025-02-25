@@ -1,0 +1,20 @@
+div {
+    display: flex;
+    background: lightgray;
+    font-size: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.drawing-cell {
+    width: 10vw;
+    height: 10vw;
+    color: red;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.header {
+    color: red;
+}
