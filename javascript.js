@@ -130,12 +130,12 @@ function getNearestColor(pixel, palette) {
 let width = 0;
 let height = 0;
 let hexColors = [];
+let imgScaleFactor = 0;
 
 function processImage(img) {
-
-  const scaleFactor = Math.min(100 / img.height, 100 / img.width);  // Resize factor
-  width = Math.floor(img.width * scaleFactor);
-  height = Math.floor(img.height * scaleFactor);
+  imgScaleFactor = Math.min(100 / img.height, 100 / img.width);
+  width = Math.floor(img.width * imgScaleFactor);
+  height = Math.floor(img.height * imgScaleFactor);
 
   const tempCanvas = document.createElement("canvas");
   const tempCtx = tempCanvas.getContext("2d");
@@ -275,9 +275,9 @@ let colorArray = [];
 function generateGrid() {
   SIZE_X = width;
   SIZE_Y = height;
-  zoomContainer.style.height = String(SIZE_Y) + "vh";
+  zoomContainer.style.height = 80 + "vh";
   zoomContainer.style.aspectRatio = String(SIZE_X / SIZE_Y);
-  flexWrapper.style.height = String(SIZE_Y) + "vh";
+  flexWrapper.style.height = 80 + "vh";
   flexWrapper.style.aspectRatio = String(SIZE_X / SIZE_Y);
 
   for (let i = 0; i < SIZE_Y; i++) {
@@ -304,8 +304,8 @@ function generateGrid() {
       const newDiv = document.createElement("div");
       newDiv.classList.add(`drawing-cell`);
       newDiv.classList.add(`col-${j}`);
-      newDiv.style.height = 100 / (SIZE_Y + 1) + "vh";
-      newDiv.style.width = 100 / (SIZE_Y + 1) + "vh";
+      newDiv.style.height = 80 / (SIZE_Y + 1) + "vh";
+      newDiv.style.width = 80 / (SIZE_Y + 1) + "vh";
       newDiv.addEventListener("click", () => onCellClick(i, j, SelectedColor));
 
       const newText = document.createElement("div");
