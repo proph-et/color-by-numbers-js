@@ -1,43 +1,107 @@
+html {
+  overflow: hidden;
+  background-color: #2c3b35;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 16px;
+  margin: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #6f9389;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.custom-file-upload:hover {
+  background-color: #2c3b35;
+}
+
+.custom-file-upload:active {
+  background-color: #6f9389;
+}
+
 div {
   display: flex;
   font-size: 32px;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-
 }
-.drawing-container{
+
+.zoom-container-container {
+  justify-content: center;
+}
+
+.zoom-container {
+  width: 45vw;
+  height: 80vh;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  cursor: pointer;
+}
+
+.zoom-container:active {
+  cursor: grabbing;
+}
+
+
+.drawing-container {
   flex-direction: column;
+  display: flex;
 }
 
 .drawing-cell {
   background: lightgray;
-  width: 128px;
-  aspect-ratio: 1/1;
+  height: 2vh;
+  width: 2vh;
   color: black;
-  flex: 1;
-  box-sizing: border-box;
+  flex: auto;
+  flex-shrink: 0;
 
   user-select: none; /* Standard */
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+}
 
+.drawing-cell-text {
+  font-size: 10px;
+
+  text-shadow: white 0 0 8px;
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .color-cell {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vw;
   color: black;
   justify-content: center;
   align-items: center;
   margin: 16px;
+  text-shadow: white 0 0 8px,
+  white 0 0 16px,
+  white 0 0 32px;
 }
 
 .no-select {
   background: lightgray;
-
-
 }
 
 .header {

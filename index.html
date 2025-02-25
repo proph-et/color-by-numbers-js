@@ -7,15 +7,23 @@
 </head>
 <body>
 
-<input type="file" id="imageUpload" accept="image/*">
-<button onclick="uploadImage()">Upload</button>
+<div>
+  <input type="file" id="imageUpload" accept="image/*" hidden>
+  <label for="imageUpload" class="custom-file-upload">Upload Image</label>
+</div>
+
 <div class="palette-container">
-
 </div>
 
-
-<div class="drawing-container">
+<div class="zoom-container-container">
+  <div class="zoom-container">
+    <div class="flex-wrapper">
+      <div class="drawing-container">
+      </div>
+    </div>
+  </div>
 </div>
+
 <script src="javascript.js"></script>
 </body>
 </html>
