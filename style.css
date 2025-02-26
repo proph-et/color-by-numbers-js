@@ -86,8 +86,6 @@ div {
 }
 
 .drawing-cell-text {
-  font-size: 10px;
-
   text-shadow: white 0 0 8px;
   user-select: none; /* Standard */
   -webkit-user-select: none; /* Safari */

@@ -311,6 +311,7 @@ function generateGrid() {
       const newText = document.createElement("div");
       newText.classList.add(`drawing-cell-text`);
       newText.textContent = String(colorArray[i][j]);
+      newText.style.fontSize = 80 / (SIZE_Y + 1) + "vh";
 
       newDiv.appendChild(newText);
       newContainer.appendChild(newDiv);
